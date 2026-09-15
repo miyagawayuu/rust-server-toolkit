@@ -29,8 +29,8 @@ class ConfigTests(unittest.TestCase):
             code = config.main(list(map(str, args)))
         return code, json.loads(output.getvalue())
 
-    def test_bom_japanese_and_no_write(self):
-        path = self.write("a.json", '\ufeff{"説明":"採取倍率","Rate":2.0}')
+    def test_bom_unicode_and_no_write(self):
+        path = self.write("a.json", '\ufeff{"Description":"Unicode \\u2603","Rate":2.0}')
         before = path.read_bytes()
         code, result = self.run_cli("check", path)
         self.assertEqual(code, 0)

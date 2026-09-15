@@ -18,3 +18,20 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m unittest discover -s tests -v
       - run: python scripts/package.py
+  docker-package:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python scripts/package.py
+      - run: |
+          docker run --rm --network none --read-only --cap-drop ALL \
+            --security-opt no-new-privileges --cpus 2 --memory 512m --pids-limit 128 \
+            --tmpfs /tmp:rw,nosuid,nodev,size=128m \
+            --mount "type=bind,source=$PWD,target=/source,readonly" \
+            python:${{ matrix.python }}-slim python /source/tests/docker/package_smoke.py

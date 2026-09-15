@@ -1,7 +1,7 @@
-# データの取り扱い
+# Privacy
 
-このパッケージ自体には外部通信、テレメトリー、開発者へのログ送信、常駐サービスはありません。JSON補助ツールは指定されたローカルファイルを読み取り、検査結果を標準出力に返します。
+The distributed plugin package has no telemetry, developer log upload, background service, or network client. Its JSON helper reads explicitly supplied local files and writes validation results to standard output. Development tools may access Docker or download container images when invoked.
 
-Codexが会話・ツール・接続先で扱うデータには、利用中のCodex／OpenAIおよび接続サービスの設定・規約が適用されます。このパッケージがCodex全体の通信を停止するものではありません。
+Data handled by Codex, its tools, and connected services remains subject to the settings and terms of those services. This package does not disable or control Codex's own network communication.
 
-バックアップや診断ログは公開リポジトリへ含めず、管理者がアクセスできる場所に保管してください。公開Issueに認証情報、個人情報、サーバーの完全なログを貼らないでください。
+Keep backups and diagnostic logs in administrator-controlled storage, outside public repositories. Do not include credentials, personal information, or complete server logs in public issues.

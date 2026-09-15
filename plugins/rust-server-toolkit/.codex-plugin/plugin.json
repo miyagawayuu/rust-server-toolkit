@@ -1,6 +1,6 @@
 {
   "name": "rust-server-toolkit",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Rust dedicated server setup, Oxide/Carbon plugin repair, and configuration workflows.",
   "author": {
     "name": "miyagawayuu",
@@ -12,11 +12,11 @@
   "keywords": ["rust-server", "oxide", "carbon", "server-administration"],
   "interface": {
     "displayName": "Rust Server Toolkit",
-    "shortDescription": "Rustサーバー構築・プラグイン修正・設定調整",
-    "longDescription": "Rust管理者向けの3つのスキルと読み取り専用JSON検査ツール。実行環境に合わせた構築、Oxide／Carbonエラー調査、設定変更を支援します。初期アルファ版。",
+    "shortDescription": "Rust server setup, plugin repair, and configuration",
+    "longDescription": "Three Codex skills and a read-only JSON checker for Rust server administrators. Prepare server configurations, investigate Oxide/Carbon errors, and adjust plugin settings. Early alpha release.",
     "developerName": "miyagawayuu",
     "category": "Productivity",
     "capabilities": [],
-    "defaultPrompt": ["RustサーバーとCarbonの起動設定を作って", "このOxideプラグインのエラーを調べて修正して", "このプラグインの設定変更候補を作って"]
+    "defaultPrompt": ["Prepare a Rust server with Carbon.", "Investigate and fix this Oxide plugin error.", "Prepare changes to this plugin configuration."]
   }
 }
