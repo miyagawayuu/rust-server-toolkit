@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rust-server-toolkit",
+  "version": "0.1.0-alpha.1",
+  "description": "Rust dedicated server setup, Oxide/Carbon plugin repair, and configuration workflows.",
+  "author": {
+    "name": "miyagawayuu",
+    "url": "https://github.com/miyagawayuu"
+  },
+  "repository": "https://github.com/miyagawayuu/rust-server-toolkit",
+  "license": "MIT",
+  "keywords": ["rust-server", "oxide", "carbon", "server-administration"]
+}
